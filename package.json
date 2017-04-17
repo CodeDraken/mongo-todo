@@ -8,8 +8,11 @@
     "test": "mocha server/**/*.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "6.10.2"
+  },
+  "author": "CodeDraken",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
