@@ -27,6 +27,7 @@ module.exports = {
             "always"
         ],
         "no-console": 0,
+        "no-undef": 0,
         "no-unused-vars": "off",
         "eqeqeq": 1,
         "no-fallthrough": 1,
