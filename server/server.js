@@ -74,7 +74,11 @@ app.patch('/todos/:id', (req, res) => {
     body.completedAt = null;
   }
 
-  
+  Todo.findByIdAndUpdate(id, {$set: body}, {new: true}).then(todo => {
+    if (!todo) return res.status(404).send();
+
+    res.send({todo});
+  }).catch(e => res.status(400).send());
 });
 
 app.listen(port, () => {
